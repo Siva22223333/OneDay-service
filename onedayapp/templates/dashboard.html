@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+</head>
+
+<body>
+    <div class="div1">
+        <div class="left-flex">
+            <div class="div1-div">
+                <div>
+                    <img src="{% static 'img/logo.png' %}" class="div1-logo">
+                </div>
+                <div class="div-p">
+                    <p class="p-div1">
+                        "Speedy service, satisfaction guaranteed, In just one day, your worries recede.
+                        For prompt solutions, we're all you need!"
+                    </p>
+                </div>
+                <div class="btn-div">
+                    <button class="div1-btn">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="right-flex">
+            <img src="{% static 'img/man.png' %}" class="div1-img">
+        </div>
+    </div>
+    <div class="div2">
+        <div class="div2-box1">
+            <img src="{% static 'img/tools.png' %}" class="box1-img">
+            <p class="div2-p1">REPAIR</p>
+        </div>
+        <div class="div2-box1 div2-box2">
+            <img src="{% static 'img/construction.png' %}" class="box1-img">
+            <P class="div2-p2">IMPROVE</P>
+        </div>
+        <div class="div2-box1">
+            <img src="{% static 'img/maintenance.png' %}" class="box1-img">
+            <P class="div2-p1"> MAINTAIN</P>
+        </div>
+
+
+    </div>
+    <div class="div3">
+        <div class="div3-left">
+            <p class="div3-p1">About Us</p>
+            <p class="div3-p2">Welcome to Oneday Service, your one-stop solution for all your one-day service needs. We
+                understand that life can get hectic, and finding reliable, efficient help for day-to-day tasks can be
+                challenging. That's why we created a platform to connect you with trusted professionals, ensuring that
+                your tasks are completed swiftly and with the highest quality. Whether you need a quick repair, a deep
+                clean, or last-minute errands, we're here to make your life easier, all within a single day. At Oneday
+                Service, your convenience is our priority!</p>
+            <button class="readmore-btn">
+                Read More
+            </button>
+
+        </div>
+        <div class="div3-right">
+            <img src="{% static 'img/about-img.jpg' %}" class="div3-img">
+
+        </div>
+
+    </div>
+    <div class="div4">
+        <div class="div4-left">
+            <img src="{% static 'img/read.png' %}" class="div4-img">
+
+        </div>
+        <div class="div4-right">
+            <p class="div4-p1">We Provide Professional Home Services.</p>
+            <p class="div4-p2">At OneDay Service, we specialize in offering professional home services that cater to all
+                your household
+                needs with speed and precision. From plumbing and electrical repairs to deep cleaning and handyman
+                tasks, our team of trusted experts is dedicated to providing top-notch service within a single day.</p>
+            <button class="div4-btn">
+                Read More
+            </button>
+        </div>
+    </div>
+    <div class="div5">
+        <div class="div5-right-div">
+            <img src="{% static 'img/hero-wave.png' %}" class="div5-img">
+        </div>
+        <div class="div5-left">
+            <div class="div5-left-div">
+                <p class="div5-p1">
+                    Download 1day Service App Today!
+                </p>
+                <p class="div5-p2">
+                    "Get it done in a day with OneDay Service! Your go-to app for swift solutions and seamless
+                    experiences.".
+                </p>
+            </div>
+        </div>
+        <div class="div5-right">
+            <img src="{% static 'img/1day.png' %}" class="div5-img2">
+        </div>
+    </div>
+</body>
+
+</html>
