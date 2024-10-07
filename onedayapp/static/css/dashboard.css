@@ -198,7 +198,7 @@
     left: 941px;
     position: relative;
     z-index: 1000;
-    bottom: 937px;
+    bottom: 730px;
     display: flex;
     flex-basis: 50%;
     height: 500px;
@@ -217,6 +217,6 @@
     font-weight: 500;
 }
 .div5-p2{
-    font-size: larger;
+    font-size: x-large;
     font-weight: 400;
 }
