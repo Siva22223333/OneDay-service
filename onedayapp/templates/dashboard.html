@@ -25,9 +25,11 @@
                     </p>
                 </div>
                 <div class="btn-div">
-                    <button class="div1-btn">
-                        Contact Us
-                    </button>
+                    <a href="{% url 'contactus' %}">
+                        <button class="div1-btn">
+                            Contact Us
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -60,9 +62,11 @@
                 your tasks are completed swiftly and with the highest quality. Whether you need a quick repair, a deep
                 clean, or last-minute errands, we're here to make your life easier, all within a single day. At Oneday
                 Service, your convenience is our priority!</p>
-            <button class="readmore-btn">
-                Read More
-            </button>
+            <a href="{% url 'aboutus' %}">
+                <button class="readmore-btn">
+                    Read More
+                </button>
+            </a>
 
         </div>
         <div class="div3-right">
@@ -82,17 +86,18 @@
                 your household
                 needs with speed and precision. From plumbing and electrical repairs to deep cleaning and handyman
                 tasks, our team of trusted experts is dedicated to providing top-notch service within a single day.</p>
-            <button class="div4-btn">
-                Read More
-            </button>
+            <a href="{% url 'services' %}">
+                <button class="div4-btn">
+                    Read More
+                </button>
+            </a>
         </div>
     </div>
     <div class="div5">
-        <div class="div5-right-div">
-            <img src="{% static 'img/hero-wave.png' %}" class="div5-img">
-        </div>
+        <img src="{% static 'img/hero-wave.png' %}" class="div5-img ">
         <div class="div5-left">
             <div class="div5-left-div">
+                <div class="div5-left-div2">
                 <p class="div5-p1">
                     Download 1day Service App Today!
                 </p>
@@ -100,11 +105,50 @@
                     "Get it done in a day with OneDay Service! Your go-to app for swift solutions and seamless
                     experiences.".
                 </p>
+                </div>
+                <div class="div5-left-div3">
+                    <img src="{% static 'img/download2.png' %}" class="div5-img1">
+                </div>
             </div>
         </div>
         <div class="div5-right">
-            <img src="{% static 'img/1day.png' %}" class="div5-img2">
+            <img src="{% static 'img/1day2.png' %}" class="div5-img2">
+            <img src="{% static 'img/mockup-2.png' %}" class="div5-img3">
         </div>
+    </div>
+    <div class="div6">
+        <div class="div6-p-div">
+            <p class="div6-p">Our Services</p>
+        </div>
+        <div class="div6-box">
+            <div class="div6-box1">
+                <img src="{% static 'img/s1.png' %}" class="div6-img">
+                <p class="div6-p1">Maintenance </p>
+                <p class="div6-p2">"OneDay Service - Keeping Your Home Running Smoothly, One Fix at a Time."</p>
+            </div>
+            <div class="div6-box1">
+                <img src="{% static 'img/s2.png' %}" class="div6-img">
+                <p class="div6-p1">Electronic</p>
+                <p class="div6-p2"> "Quick Fixes, Reliable Solutions - Electronics Done Right, In One Day!"</p>
+            </div>
+            <div class="div6-box1">
+                <img src="{% static 'img/s3.png' %}" class="div6-img">
+                <p class="div6-p1">Plumbing</p>
+                <p class="div6-p2"> "Fixing Leaks, Restoring Comfort - Fast Plumbing Solutions by OneDay Service!"</p>
+            </div>
+        </div>
+        <div class="div6-btn-div">
+            <a href="{% url 'services' %}">
+                <button class="div6-btn">
+                    Read More
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="footer-div">
+        <a href="" class="footer-div-a">
+            &copy 2024 All Rights Reserved By Mindtek
+        </a>
     </div>
 </body>
 

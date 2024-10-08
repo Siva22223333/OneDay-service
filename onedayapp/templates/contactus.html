@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contactus.css' %}">
+
+</head>
+
+<body>
+    <div class="div1">
+        <img src="{% static 'img/logo.png' %}" class="div1-logo">
+    </div>
+    <div class="heading-div">
+        <p class="heading-div-p">Contact Us</p>
+    </div>
+    <div class="div2">
+        <div class="contact-div1">
+            <img src="{% static 'img/contact.png' %}" class="contact-img">
+        </div>
+        <div class="contact-div2">
+            <p class="contact-div2-p">Get in Touch</p>
+            <form action="">
+                <label > Full Name</label>
+                <input type="text" class="input-box" name="name" id="name">
+                <label > Email</label>
+                <input type="text" class="input-box" name="email" id="email">
+                <label > Message</label>
+                <input type="text" class="input-box" name="message" id="message">
+                <input type="submit" class="submit">
+            </form>
+        </div>
+        <div  class="contact-div3">
+            <p class="contact-div3-p1"> Contact</p>
+            <p class="contact-div3-p2">+000 000 00 00 00</p>
+            <p class="contact-div3-p1"> Based in</p>
+            <p class="contact-div3-p2">Marthandam</p>
+            <p class="contact-div3-p2">Nagercoil</p>
+        </div>
+    </div>
+    <div class="div4">
+        <div class="div4-box">
+            <p class="div4-p2">
+                <img src="{% static 'img/email.png' %}" class="contact-div-icon">
+                OnedaySevice@gmail.com
+            </p>
+            <p class="div4-p2">
+                <img src="{% static 'img/phone.png' %}" class="contact-div-icon">
+                +380 00 467 37 39
+            </p>
+        </div>
+        <div class="div4-div2-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d987.0007797168262!2d77.22279889048748!3d8.30248690000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04551342c39167%3A0xaaef7cb5ea28b8d2!2sSea%20Sense%20Group%20of%20Companies!5e0!3m2!1sen!2sin!4v1725950587553!5m2!1sen!2sin"
+                width="600" height="450" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="footer-div">
+        <a href="" class="footer-div-a">
+            &copy 2024 All Rights Reserved By Mindtek
+        </a>
+    </div>
+</body>
+
+</html>
