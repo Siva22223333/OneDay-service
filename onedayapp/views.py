@@ -20,3 +20,8 @@ def contactus(request):
     tempiate=loader.get_template('contactus.html')
     return HttpResponse(tempiate.render())
 
+
+def copyrights(request):
+    tempiate=loader.get_template('copyrights.html')
+    return HttpResponse(tempiate.render())
+

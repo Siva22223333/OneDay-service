@@ -15,6 +15,7 @@
 <body>
     <div class="div1">
         <img src="{% static 'img/logo.png' %}" class="div1-logo">
+        <img src="{% static 'img/back.png' %}" class="div1-back" onclick="history.back()">
     </div>
     <div class="heading-div">
         <p class="heading-div-p">Contact Us</p>
@@ -32,7 +33,7 @@
                 <input type="text" class="input-box" name="email" id="email">
                 <label > Message</label>
                 <input type="text" class="input-box" name="message" id="message">
-                <input type="submit" class="submit">
+                <input type="submit" class="submit" value="Contact Us">
             </form>
         </div>
         <div  class="contact-div3">
@@ -53,6 +54,13 @@
                 <img src="{% static 'img/phone.png' %}" class="contact-div-icon">
                 +380 00 467 37 39
             </p>
+            <div class="social-media-icon-div">
+                <img src="{% static 'img/instagram.png' %}" class="social-media-icon">
+                <img src="{% static 'img/twitter.png' %}" class="social-media-icon">
+                <img src="{% static 'img/whatssapp.png' %}" class="social-media-icon">
+                <img src="{% static 'img/youtube.png' %}" class="social-media-icon">
+                <img src="{% static 'img/linkedin.png' %}" class="social-media-icon">
+            </div>
         </div>
         <div class="div4-div2-map">
             <iframe
@@ -62,7 +70,7 @@
         </div>
     </div>
     <div class="footer-div">
-        <a href="" class="footer-div-a">
+        <a href="{% url 'copyrights' %}" class="footer-div-a">
             &copy 2024 All Rights Reserved By Mindtek
         </a>
     </div>

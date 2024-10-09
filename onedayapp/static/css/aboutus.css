@@ -8,12 +8,22 @@ body{
 }
 .div1{
     padding: 50px 0px 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.div1-back{
+    width: 55px;
+    height: 55px;
+    margin-right: 100px;
+    cursor: pointer;
 }
 .div1-logo{
     height: 100px;
     width: 150px;
 
 }
+
 .div2{
     display: flex;
     justify-content: space-around;
@@ -78,4 +88,115 @@ body{
     text-decoration: none;
     font-size: medium;
     color: white;
+}
+
+@media screen and (max-width:768px) {
+    .div2{
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+    
+    .div1-back {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+    .div1-logo {
+        height: 56px;
+        width: 90px;
+    }
+    .div2-img {
+        width: 333px;
+        height: 251px;
+        border-radius: 20px;
+    }
+    .div2-p2 {
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 25px;
+    }
+    .heading-div {
+        padding: 23px 0px;
+    }
+    .div2-p1 ,.div3-p1 {
+        font-size: 30px;
+        font-weight: 500;
+        
+    }
+    .div3-p2-div {
+        padding: 0px 30px;
+    }
+    .div3 {
+        padding: 0px;
+    }
+    .footer-div-a {
+        font-size: x-small;
+    }
+
+    .footer-div {
+        height: 35px;
+    }
+}
+@media screen and (max-width:562px) {
+    .div2{
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+    .div2-img {
+        width: 262px;
+        height: 189px;
+        border-radius: 20px;
+    }
+    .div1-logo {
+        height: 56px;
+        width: 90px;
+    }
+    .div1-back {
+        width: 33px;
+        height: 36px;
+        margin-right: 13px;
+    }
+    .div1{
+        padding: 10px 10px 0px 10px;
+    }
+    .div2-p2 {
+        font-size: 16px;
+        font-weight: 400;
+        padding-bottom: 25px;
+    }
+    .heading-div {
+        padding: 23px 0px;
+    }
+    .div2-p1 ,.div3-p1 {
+        font-size: 30px;
+        font-weight: 500;
+        
+    }
+    .div3-p2-div {
+        padding: 0px 30px;
+    }
+    .div3 {
+        padding: 0px;
+    }
+    .footer-div-a {
+        font-size: x-small;
+    }
+
+    .footer-div {
+        height: 35px;
+    }
+}
+@media screen and (max-width:320px) {
+    .div1-logo {
+        height: 53px;
+        width: 90px;
+    }
+    .div1{
+        padding: 10px 10px 0px 10px;
+    }
+    .div1-back {
+        width: 33px;
+        height: 36px;
+        margin-right: 13px;
+    }
 }
