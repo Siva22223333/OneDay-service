@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,37 +9,43 @@
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/contactus.css' %}">
-
 </head>
 
 <body>
     <div class="div1">
-        <img src="{% static 'img/logo.png' %}" class="div1-logo">
-        <img src="{% static 'img/back.png' %}" class="div1-back" onclick="history.back()">
+        <img src="{% static 'img/logo.png' %}" class="div1-logo" alt="Logo">
+        <img src="{% static 'img/back.png' %}" class="div1-back" alt="Back" onclick="history.back()">
     </div>
     <div class="heading-div">
         <p class="heading-div-p">Contact Us</p>
     </div>
     <div class="div2">
         <div class="contact-div1">
-            <img src="{% static 'img/contact.png' %}" class="contact-img">
+            <img src="{% static 'img/contact.png' %}" class="contact-img" alt="Contact">
         </div>
         <div class="contact-div2">
             <p class="contact-div2-p">Get in Touch</p>
-            <form action="">
-                <label > Full Name</label>
+            <form action="" id="form_data" class="form_data" method="post">
+                {% csrf_token %}
+                <label for="name">Full Name</label>
                 <input type="text" class="input-box" name="name" id="name">
-                <label > Email</label>
+                <span id="name_error" class="error-message"></span>
+
+                <label for="email">Email</label>
                 <input type="text" class="input-box" name="email" id="email">
-                <label > Message</label>
+                <span id="email_error" class="error-message"></span>
+
+                <label for="message">Message</label>
                 <input type="text" class="input-box" name="message" id="message">
+                <span id="message_error" class="error-message"></span>
+
                 <input type="submit" class="submit" value="Contact Us">
             </form>
         </div>
-        <div  class="contact-div3">
-            <p class="contact-div3-p1"> Contact</p>
+        <div class="contact-div3">
+            <p class="contact-div3-p1">Contact</p>
             <p class="contact-div3-p2">+000 000 00 00 00</p>
-            <p class="contact-div3-p1"> Based in</p>
+            <p class="contact-div3-p1">Based in</p>
             <p class="contact-div3-p2">Marthandam</p>
             <p class="contact-div3-p2">Nagercoil</p>
         </div>
@@ -47,26 +53,52 @@
     <div class="div4">
         <div class="div4-box">
             <p class="div4-p2">
-                <img src="{% static 'img/email.png' %}" class="contact-div-icon">
+                <img src="{% static 'img/email.png' %}" class="contact-div-icon" alt="Email">
                 OnedaySevice@gmail.com
             </p>
             <p class="div4-p2">
-                <img src="{% static 'img/phone.png' %}" class="contact-div-icon">
+                <img src="{% static 'img/phone.png' %}" class="contact-div-icon" alt="Phone">
                 +380 00 467 37 39
             </p>
             <div class="social-media-icon-div">
-                <img src="{% static 'img/instagram.png' %}" class="social-media-icon">
-                <img src="{% static 'img/twitter.png' %}" class="social-media-icon">
-                <img src="{% static 'img/whatssapp.png' %}" class="social-media-icon">
-                <img src="{% static 'img/youtube.png' %}" class="social-media-icon">
-                <img src="{% static 'img/linkedin.png' %}" class="social-media-icon">
+                <a href="https://www.instagram.com/" class="social-media-icon">
+                    <img src="{% static 'img/instagram.png' %}" class="social-media-icon" alt="Instagram">
+                </a>
+                <a href="https://x.com/" class="social-media-icon">
+                    <img src="{% static 'img/twitter.png' %}" class="social-media-icon" alt="Twitter">
+                </a>
+                <a href="https://web.whatsapp.com/" class="social-media-icon">
+                    <img src="{% static 'img/whatssapp.png' %}" class="social-media-icon" alt="WhatsApp">
+                </a>
+                <a href="https://www.youtube.com/" class="social-media-icon">
+                    <img src="{% static 'img/youtube.png' %}" class="social-media-icon" alt="YouTube">
+                </a>
+                <a href="https://www.linkedin.com/" class="social-media-icon">
+                    <img src="{% static 'img/linkedin.png' %}" class="social-media-icon" alt="LinkedIn">
+                </a>
             </div>
         </div>
         <div class="div4-div2-map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d987.0007797168262!2d77.22279889048748!3d8.30248690000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04551342c39167%3A0xaaef7cb5ea28b8d2!2sSea%20Sense%20Group%20of%20Companies!5e0!3m2!1sen!2sin!4v1725950587553!5m2!1sen!2sin"
-                width="600" height="450" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </div>
+    <div class="popup-container" id="popup">
+        <div class="popup">
+            <div class="popup-div">
+                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                    type="module"></script>
+
+                <dotlottie-player id="video"
+                    src="https://lottie.host/feadc2a5-201b-4ab1-b61c-571563b12b60/QnWLUURZ6l.json"
+                    background="transparent" speed="1" class="video"></dotlottie-player>
+                <div class="success-div">
+                    <p class="success-p">Added Successfully</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer-div">
@@ -74,6 +106,130 @@
             &copy 2024 All Rights Reserved By Mindtek
         </a>
     </div>
+
 </body>
+<script>
+    document.getElementById("form_data").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get values from the form
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Clear previous error messages
+        document.getElementById("name_error").textContent = "";
+        document.getElementById("email_error").textContent = "";
+        document.getElementById("message_error").textContent = "";
+
+        let valid = true; // Track overall validity
+
+        // Validation checks
+        if (!name) {
+            document.getElementById("name_error").textContent = "Please Enter Your Name";
+            valid = false;
+        } else {
+            const namePattern = /^[a-zA-Z\s\-]+$/;
+            if (!namePattern.test(name)) {
+                document.getElementById("name_error").textContent = "Please Enter a valid name";
+                valid = false;
+            }
+        }
+
+        if (!email) {
+            document.getElementById("email_error").textContent = "Please Enter Your Email";
+            valid = false;
+        } else {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("email_error").textContent = "Please Enter a valid Email";
+                valid = false;
+            }
+        }
+
+        if (!message) {
+            document.getElementById("message_error").textContent = "Please Enter Your Message";
+            valid = false;
+        }
+
+        // If valid, proceed with form submission logic (e.g., AJAX call)
+        if (valid) {
+
+            const data = {
+                Name: name,
+                Email: email,
+                Message: message
+            };
+            const csrfToken = getCookie('csrftoken'); // Adjust the cookie name if needed
+
+            fetch("http://127.0.0.1:8000/api/contact_POST", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken // Include CSRF token in headers
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    popup();
+                })
+
+                .catch(function (error) {
+                    console.log(`Error: ${error.message}`); // Alert on error
+                });
+
+        }
+    });
+
+    function getdata(pk) {
+        fetch("http://127.0.0.1:8000/api/contact_GET" + id, {
+            method: 'GET',
+            headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken // Include CSRF token in headers
+            },
+            body: JSON.stringify(data)
+        }).then(function (response) {
+            console.log(response)
+            response.forEach(i => console.log(i.name));
+        }).catch(function (err) {
+            console.log(`Error: ${err}`)
+        });
+    }
+    function popup() {
+
+        document.getElementById("popup").style.display = "block";
+        const lottiePlayer = document.querySelector('dotlottie-player');
+        document.getElementById("form_data").reset();
+        lottiePlayer.load("https://lottie.host/feadc2a5-201b-4ab1-b61c-571563b12b60/QnWLUURZ6l.json")
+            .then(() => {
+                lottiePlayer.play();
+            });
+        setTimeout(() => {
+            document.getElementById("popup").style.display = "none";
+        }, 3000);
+    }
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Check if this cookie string begins with the name we want
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+</script>
 
 </html>

@@ -8,11 +8,16 @@ body {
     background-color: #dcedfc;
 }
 
-.div1{
-    padding: 50px 0px 0px 50px;
+.div1 {
+    padding: 40px 25px 0px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.error-message{
+    font-size: small;
+    color: red;
+    padding: 2px 0px 0px 10px;
 }
 .div1-back{
     width: 55px;
@@ -41,7 +46,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 7px;
 }
 
 .contact-img {
@@ -63,8 +68,8 @@ form {
     padding: 5px 0px;
 }
 .social-media-icon{
-    height: 49px;
-    width: 49px;
+    height: 44px;
+    width: 44px;
 }
 .contact-div3-p1 {
     font-size: xx-large;
@@ -74,7 +79,7 @@ form {
 .social-media-icon-div{
     width: 317px;
     display: flex;
-    height: 198px;
+    height: 151px;
     column-gap: 80px;
     flex-wrap: wrap;
     flex-direction: row;
@@ -108,8 +113,8 @@ iframe {
 }
 
 .contact-div-icon {
-    height: 35px;
-    width: 34px;
+    height: 41px;
+    width: 40px;
 }
 
 .div4-box {
@@ -169,7 +174,42 @@ label {
     font-size: xx-large;
     font-weight: 600;
 }
-
+.popup{
+    width: 495px;
+    position: relative; /* Change to relative for better positioning */
+    background-color: white;
+    height: 400px;
+    margin: 0 auto; /* Center horizontally */
+    border-radius: 46px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    top: 25%;
+}
+.popup-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.success-p{
+    font-size: xx-large;
+    font-weight: 500;
+    color: #0ce817;
+}
+.popup-container{
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+    display: none;
+}
 .footer-div {
     display: flex;
     align-items: center;
@@ -183,7 +223,10 @@ label {
     font-size: medium;
     color: white;
 }
-
+.video{
+    width: 272px; 
+    height: 272px;
+}
 @media screen and (max-width:768px) {
 
     .div1-back {
@@ -261,6 +304,29 @@ label {
     .footer-div {
         height: 40px;
     }
+    .social-media-icon {
+        height: 36px;
+        width: 36px;
+    }
+    .social-media-icon-div {
+        width: 238px;
+        height: 105px;
+        column-gap: 37px;
+    }
+    .video {
+        width: 227px;
+        height: 210px;
+    }
+    .popup {
+        width: 500px;
+        height: 325px;
+        top: 22%;
+        right: 0%;
+        border-radius: 25px;
+    }
+    .success-p {
+        font-size: 28px;
+    }
 }
 
 @media screen and (max-width:562px) {
@@ -268,9 +334,11 @@ label {
         top: -94px;
         right: 0%;
     }
-
+    .div1 {
+        padding: 10px 10px 0px 10px;
+    }
     .div4-box {
-        padding: 16px;
+        padding: 30px;
         height: 229px;
         width: 259px;
     }
@@ -284,12 +352,13 @@ label {
         width: 90px;
     }
     .div1-back {
-        width: 33px;
-        height: 36px;
+        width: 34px;
+        height: 35px;
         margin-right: 13px;
     }
     .div2 {
         flex-direction: column;
+        padding-right: 0px;
     }
 
     .div4 {
@@ -361,6 +430,29 @@ label {
     .contact-div3 {
         padding-left: 60px;
     }
+    .social-media-icon-div {
+        width: 265px;
+        height: 117px;
+        column-gap: 25px;
+    }
+    .social-media-icon {
+        height: 30px;
+        width: 30px;
+    }
+    .video {
+        width: 175px;
+        height: 175px;
+    }
+    .popup {
+        width: 277px;
+        height: 270px;
+        top: 30%;
+        right: 0%;
+        border-radius: 25px;
+    }
+    .success-p {
+        font-size: 21px;
+    }
 }
 
 @media screen and (max-width:320px) {
@@ -370,7 +462,7 @@ label {
     }
 
     .div4-box {
-        padding: 16px;
+        padding: 22px;
         height: 229px;
         width: 259px;
     }
@@ -380,7 +472,7 @@ label {
     }
     .div1-back {
         width: 33px;
-        height: 36px;
+        height: 34px;
         margin-right: 13px;
     }
     .contact-img {
@@ -464,9 +556,26 @@ label {
     }
     .social-media-icon-div {
         column-gap: 12px;
+        width: 236px;
+        justify-content: space-evenly;
+        height: 120px;
     }
     .social-media-icon {
-        height: 34px;
-        width: 35px;
+        height: 28px;
+        width: 28px;
+    }
+    .video{
+        width: 160px;
+        height: 163px;
+    }
+    .popup {
+        width: 249px;
+        height: 284px;
+        top: 30%;
+        right: 0%;
+        border-radius: 25px;
+    }
+    .success-p {
+        font-size: larger;
     }
 }
